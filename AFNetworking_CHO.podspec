@@ -13,13 +13,13 @@ Pod::Spec.new do |s|
   }
   
   s.requires_arc = true
-  s.ios.deployment_target = '9.0'
-  s.osx.deployment_target = '10.10'
+  s.ios.deployment_target     = '9.0'
+  s.osx.deployment_target     = '10.12'
+
+  s.source_files = 'AFNetworking/**/*.{h,m}'
   
-  s.source_files = [
-    'AFNetworking/**/*.{h,m}',
-    'UIKit+AFNetworking/**/*.{h,m}'
-  ]
+  s.ios.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.alamofire.AFNetworking' }
+  s.osx.pod_target_xcconfig = { 'PRODUCT_BUNDLE_IDENTIFIER' => 'com.alamofire.AFNetworking' }
   
   s.pod_target_xcconfig = {
     'DEFINES_MODULE' => 'YES'
