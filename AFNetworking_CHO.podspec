@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'AFNetworking_CHO'
-  s.version  = '4.0.2'
+  s.version  = '4.0.3'
   
   s.license  = 'MIT'
   s.summary  = 'Custom networking framework for Apple platforms.'
@@ -14,14 +14,13 @@ Pod::Spec.new do |s|
   
   s.requires_arc = true
   s.ios.deployment_target = '9.0'
-  s.osx.deployment_target = '10.10'
+  s.osx.deployment_target = '10.13'
   
-  s.source_files = [
-    'AFNetworking/**/*.{h,m}',
-    'UIKit+AFNetworking/**/*.{h,m}'
-  ]
-  
+  s.source_files = 'AFNetworking/**/*.{h,m}'
+  s.ios.source_files = 'UIKit+AFNetworking/**/*.{h,m}'
+
   s.pod_target_xcconfig = {
-    'DEFINES_MODULE' => 'YES'
+    'DEFINES_MODULE' => 'YES',
+    'HEADER_SEARCH_PATHS' => '$(PODS_TARGET_SRCROOT)/AFNetworking'
   }
 end
