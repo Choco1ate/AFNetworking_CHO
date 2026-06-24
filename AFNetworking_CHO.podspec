@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'AFNetworking_CHO'
-  s.version  = '4.0.3'
+  s.version  = '4.0.4'
   
   s.license  = 'MIT'
   s.summary  = 'Custom networking framework for Apple platforms.'
